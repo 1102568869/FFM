@@ -28,6 +28,11 @@
 			<version>2.1</version>
 			<scope>${project.build.scope}</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${project.build.springVersion}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
