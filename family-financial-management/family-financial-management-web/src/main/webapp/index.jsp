@@ -11,23 +11,19 @@
 <html>
 <head>
 <base href="<%=basePath%>">
-<meta property="qc:admins" content="15565432767301301671306654766570" />
-<title>ffmwx</title>
+<meta property="qc:admins" content="155654317764767301301665476657527" />
+<title>My JSP 'index.jsp' starting page</title>
 <link rel="shortcut icon" type="image/x-icon" href="public/img/0.png" />
 
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101226591"
+	data-redirecturi="http://www.longshasha.net/ffmweb/login/userlogin.ctrl" charset="utf-8"></script>
+<!-- <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101226591"
+	data-redirecturi="http://longshasha.wicp.net/family-financial-management-web/login/userlogin.ctrl" charset="utf-8"></script>
+ -->
+
 <script type="text/javascript" src="public/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101238349"
-	data-redirecturi="http://longshasha.wicp.net/ffmwx/login/userlogin.ctrl" charset="utf-8"></script>
 <script type="text/javascript">
 	//从页面收集OpenAPI必要的参数。get_user_info不需要输入参数，因此paras中没有参数
-
-	QC.Login({
-		btnId : "qqLoginBtn",//插入按钮的html标签id
-		size : "A_M",//按钮尺寸
-		scope : "all",//展示授权，全部可用授权可填 all
-		display : "pc"//应用场景，可选
-	});
-
 	var params = {};
 	var user = {};
 	//用JS SDK调用OpenAPI
@@ -71,9 +67,15 @@
 		<!--  -->
 		帐号:<input type="text" name="username" /> <br />
 		<!--  -->
-		密码:<input type="password" name="userpwd" /><br />
-		<!--  -->
-		<span id="qqLoginBtn"></span>
+		密码:<input type="password" name="userpwd" /><br /> <span id="qqLoginBtn"></span>
+		<script type="text/javascript">
+			QC.Login({
+				btnId : "qqLoginBtn",//插入按钮的html标签id
+				size : "A_M",//按钮尺寸
+				scope : "all",//展示授权，全部可用授权可填 all
+				display : "pc"//应用场景，可选
+			});
+		</script>
 	</form>
 
 </body>

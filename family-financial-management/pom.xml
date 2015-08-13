@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -28,10 +29,108 @@
 			<version>2.1</version>
 			<scope>${project.build.scope}</scope>
 		</dependency>
+		<!-- rpc远程方法调用 -->
+		<dependency>
+			<groupId>org.phprpc</groupId>
+			<artifactId>phprpc</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${project.build.springVersion}</version>
+		</dependency>
+		<!-- json工具jackson -->
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>1.9.13</version>
+			<scope>${project.build.scope}</scope>
+		</dependency>
+		<!-- AOP -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.5.4</version>
+			<scope>${project.build.scope}</scope>
+		</dependency>
+		<!-- junit单元测试 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<!-- spring test 集成spring测试 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${project.build.springVersion}</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<!-- 日志相关 slf4j,log4j -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.6.1</version>
+			<scope>${project.build.scope}</scope>
+		</dependency>
+		<!-- XML解析 -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.6.1</version>
+			<scope>${project.build.scope}</scope>
+		</dependency>
+		<!-- json工具 -->
+		<dependency>
+			<groupId>org.nutz</groupId>
+			<artifactId>nutz</artifactId>
+			<version>1.a.32</version>
+		</dependency>
+		<!-- memcached client -->
+		<dependency>
+			<groupId>net.longshasha</groupId>
+			<artifactId>memcached-client</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> <version>1.2.16</version> </dependency> -->
+		<!-- java模板引擎velocity -->
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<version>1.7</version>
+			<scope>${project.build.scope}</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<version>2.0</version>
+			<scope>${project.build.scope}</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>oro</groupId>
+					<artifactId>oro</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>sslext</groupId>
+					<artifactId>sslext</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts-tiles</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.struts</groupId>
+					<artifactId>struts-taglib</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 	</dependencies>
 	<build>
@@ -66,5 +165,7 @@
 
 	<modules>
 		<module>family-financial-management-weixin</module>
+		<module>family-financial-management-ds</module>
+		<module>family-financial-management-web</module>
 	</modules>
 </project>
