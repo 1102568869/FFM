@@ -31,7 +31,7 @@ public class LoginCtrl {
 	public void loginout(HttpServletResponse response, String openid) throws IOException {
 		System.out.println("loginout  openid:" + openid);
 		MemcachedHelper.newInstance().delete(openid);
-		response.sendRedirect("http://www.longshasha.net/ffmweb/");
+		response.sendRedirect("http://longshasha.wicp.net/ffmwx/");
 	}
 
 	@RequestMapping("/ajaxlogin")

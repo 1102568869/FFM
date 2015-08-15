@@ -12,7 +12,7 @@
 <title>主页</title>
 <link rel="shortcut icon" type="image/x-icon" href="./public/img/0.png" />
 
-<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" charset="utf-8" data-callback="true" data-appid="101226591"></script>
+<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" charset="utf-8" ></script>
 <script type="text/javascript">
 	if (!QC.Login.check()) {
 		alert("用户已退出!");
